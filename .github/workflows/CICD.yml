@@ -10,5 +10,7 @@ jobs:
   cicd:
     runs-on: ubuntu-latest
     steps:
-      - name: 'introduce'
-        run: 'echo "Hello, github actions"'
+      - uses: actions/checkout@3
+        with:
+          ref: 'main'
+      - run: npm ci
